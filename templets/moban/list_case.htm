@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="1200">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="/skins/css.css">
+<link id="skin" rel="stylesheet" href="/skins/jbox.css">
+<script type="text/javascript" src="/skins/jquery-1_002.js"></script>
+<script type="text/javascript" src="/skins/html5.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  
+  var typename="{dede:field.typename/}";
+  $(".min_nav_left a:gt(0)").each(function(i){
+  
+  	var aname = $(this).find("font").html();
+	
+	
+  	if(aname == typename){
+	$(".min_nav_left a").eq(0).removeClass("hov");
+		$(this).addClass("hov");
+	}
+  });
+});
+</script>
+</head>
+<body>
+{dede:include filename='kefu.htm'/}
+{dede:include filename='header.htm'/}
+
+<div class="hgrap">&nbsp;</div>
+<section class="case_tit">
+<span class="en">OUR WORK</span><b>.</b>我们的案例
+</section>
+<section id="case_list">
+<div class="min_nav_left">
+{dede:type typeid='4'}<a href="[field:typelink/]" class="hov" title="全部案例"><font>全部作品</font></a>{/dede:type}        
+{dede:channel typeid='4'  type='son' } 
+ <a href='[field:typelink/]'><font>[field:typename/]</font></a>
+{/dede:channel}
+</div>
+<div class="case_list_body">
+<ul>
+{dede:list pagesize='100'}
+<li>
+  <a target="_blank" href="[field:arcurl/]">
+  <div class="case_list_body_pic">
+      <img src="[field:litpic/]" height="146" width="216">
+  </div>
+  <div class="case_list_info">
+      <p class="cast_list_tit">[field:title/]</p>
+      <p class="cast_list_kaifa">开发语言：<br>php + MsSql</p>
+      <p>
+          </p><div style="margin-top: 0px;" class="case_open"></div>
+      <p></p>
+  </div>
+  </a>
+</li>
+{/dede:list}          
+<div class="clear"></div>
+</ul>
+</div>
+ 
+</section>
+<script type="text/javascript" src="/skins/jquery-1.js"></script>
+<script type="text/javascript" src="/skins/jquery.js"></script>
+<script type="text/javascript" src="/skins/main.js"></script>
+<script>
+$("a.mark").css({"-moz-opacity":0.0,"opacity":0.0});
+$("a.cc").css({"-moz-opacity":0.0,"opacity":0.0});
+$(function(){
+var $window = $(window);
+var $case_list = $("#case_list");
+var $case_detail = $("#case_detail");
+var $caselistheight = $("#caselistheight");
+var $case_list_body_li = $(".case_list_body li");
+
+/****************初始化*******************/
+$caselistheight.val($case_list.height());
+var ik = 0;
+$case_list_body_li.each(function(){
+if(ik < 12)
+{
+$(this).delay(ik*150).fadeIn().animate({"margin-top":0},{duration:450,easing: "easeOutQuart"});
+}
+ik++;
+});
+
+
+/****************点击事件*****************/
+$("#close").click(function(){
+$case_detail.stop(false,true).animate({"height":0},{duration:2000,
+complete:function(){
+  $case_list.animate({"height":$caselistheight.val()},{duration:2000});
+  }
+});
+});
+
+$(".case_list_body ul li a").hover(
+function(){
+$(this).find(".case_open").animate({"margin-top":-6},{duration:100});
+},
+function(){
+$(this).find(".case_open").animate({"margin-top":0},{duration:100});
+}
+);
+
+var page = 2;
+var totalpage = 6;
+$window.scroll(function() {
+var twh = $(document.body).height() - $window.height();
+posScroll = $window.scrollTop();					//获取当前滚动高度
+if(posScroll>=(twh-5) && !$case_list_body_li.is(":animated"))								//页面最底端
+{
+  var itemcount = 0;
+  delay = 0;
+  $case_list_body_li.each(function(){
+  if($(this).css("margin-top") == "60px")
+  {
+      
+      if(itemcount < 9)
+      {
+          $(this).delay(delay*50).fadeIn().animate({"margin-top":0},{duration:50,easing:"easeOutQuart"});
+          delay++;
+      }
+      itemcount++;
+  }
+});
+page++;
+}
+var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+if(scrollBottom==0){
+  var itemcount = 0;
+  delay = 0;
+  $case_list_body_li.each(function(){
+  if($(this).css("margin-top") == "60px")
+  {
+      
+      if(itemcount < 9)
+      {
+          $(this).delay(delay*50).fadeIn().animate({"margin-top":0},{duration:50,easing:"easeOutQuart"});
+          delay++;
+      }
+      itemcount++;
+  }
+  });
+  page++;
+}
+});
+});
+</script>
+{dede:include filename='footer.htm'/}
+</body>
+</html>

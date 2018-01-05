@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="1200">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="/skins/css.css">
+<link id="skin" rel="stylesheet" href="/skins/jbox.css">
+<script type="text/javascript" src="/skins/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/skins/html5.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  
+  var typename="{dede:field.typename/}";
+  $(".min_nav_left a:gt(0)").each(function(i){
+  
+  	var aname = $(this).find("font").html();
+	
+	
+  	if(aname == typename){
+	$(".min_nav_left a").eq(0).removeClass("hov");
+		$(this).addClass("hov");
+	}
+  });
+});
+</script>
+</head>
+<body>
+{dede:include filename='kefu.htm'/}
+{dede:include filename='header.htm'/}
+
+<div class="hgrap">&nbsp;</div>
+<section class="case_tit">
+<span class="en">THE BEST PRODUCT</span><b>.</b>优势产品
+</section>
+<div class="box">
+<div class="div">
+<div class="min_nav_left">        
+{dede:channel typeid='34'  type='son' } 
+ <a href='[field:typelink/]'><font>[field:typename/]</font></a>
+{/dede:channel}
+</div>
+﻿<div class="bg_box">
+<div class="content" style="padding-top:10px;">
+<div class="title">
+<h2>{dede:field.typename/}</h2>
+<div>
+{dede:field.content/}
+</div>
+</div>
+
+</div>
+
+<div class="cl"></div>
+
+</div>
+
+</div>
+</div>
+{dede:include filename='footer.htm'/}
+</body>
+</html>

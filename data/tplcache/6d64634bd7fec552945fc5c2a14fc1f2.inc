@@ -1,0 +1,1 @@
+<a href="[field:typeurl/]">互动建站</a>

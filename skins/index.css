@@ -1,0 +1,69 @@
+﻿
+#focusBar {
+    width: 100%;
+    height: 485px;
+    clear: both;
+    position: relative;
+    background: #242424;
+    overflow: hidden;
+}
+
+    #focusBar li {
+        width: 100%;
+        clear: both;
+        height: 485px;
+        display: none;
+        position: absolute;
+        /* position: relative; */
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #focusBar .focusL {
+        height: 485px;
+        position: absolute;
+        z-index: 19;
+        /* left: -1000px; */
+        top: 0px;
+        left: -950px;
+        margin-left: 50%;
+    }
+
+    #focusBar .focusR {
+        height: 485px;
+        position: absolute;
+        z-index: 9;
+        /* right: 1000px; */
+        top: 0px;
+        left: -950px;
+        margin-left: 50%;
+    }
+
+a.arrL, a.arrR {
+    display: block;
+    width: 52px;
+    height: 134px;
+    position: absolute;
+    top: 175px;
+    z-index: 99;
+    cursor: pointer;
+    background-image: url(bt_arr.png);
+    background-repeat: no-repeat;
+}
+
+a, a:hover {
+    color: #666666;
+    text-decoration: none;
+    border: 0px;
+}
+
+
+a.arrL {
+left: -52px;
+background-position: 0px 0px;
+}
+
+a.arrR {
+right: -52px;
+background-position: -68px 0px;
+}

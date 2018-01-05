@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="1200">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="/skins/css.css">
+<link id="skin" rel="stylesheet" href="/skins/jbox.css">
+<script type="text/javascript" src="/skins/jquery-1_002.js"></script>
+<script type="text/javascript" src="/skins/html5.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+var typename="{dede:field.typename/}";
+$(".min_nav_left a:gt(0)").each(function(i){
+
+var aname = $(this).find("font").html();
+if(aname == typename){
+$(".min_nav_left a").eq(0).removeClass("hov");
+$(this).addClass("hov");
+}
+});
+});
+</script>
+<style type="text/css">.uyan_cmt_uname{color: #2B8CE6 !important;}#uyan_cmt_box{width: 100% !important;}#uyan_cmty_btn{display: block !important;}#uyan_login_btn{display: block !important;}#uyan_usp{display: none !important;}.uyan_st_slog{right: 162px !important;}#uyan_info_sync{display: none !important;}</style>
+</head>
+<body>
+{dede:include filename='kefu.htm'/}
+{dede:include filename='header.htm'/}
+<div class="hgrap">&nbsp;</div>
+<section class="case_tit">
+<span class="en">OUR NEWS</span><b>.</b>新闻资讯
+</section>
+
+<div class="box">
+<div class="div">
+﻿<div class="bg_box">
+<div class="min_nav">
+<div class="min_nav_left2 fl">
+{dede:type typeid='22'}<a href="[field:typelink/]" class="hov" title="全部资讯"><font>全部资讯</font></a>{/dede:type}        
+{dede:channel typeid='22'  type='son' } 
+<a href='[field:typelink/]'><font>[field:typename/]</font></a>
+{/dede:channel}
+</div>
+<div class="fr mxgnext min_nav_left2">
+<span class="uptwo">
+{dede:prenext get='next'/} </span>
+<span class="downtwo">
+{dede:prenext get='pre'/}            </span>
+</div>
+</div>
+
+<div class="content">
+<div class="title">
+<h2>{dede:field.title/}</h2>
+<div>
+<div class="fr">
+
+
+
+<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_b" style="line-height: 12px;">
+<img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831" />
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=441816" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- Baidu Button END -->
+
+
+</div>
+<span>发布于：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}　　　浏览：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></span></div>
+</div>
+
+<div id="content">
+{dede:field.body/}
+</div>
+
+</div>
+
+<div class="cl"></div>
+
+
+<div class="fr mxgnext min_nav_left">
+<span class="uptwo">
+{dede:prenext get='next'/} </span>
+<span class="downtwo">
+{dede:prenext get='pre'/}            </span>
+</div>
+</div>
+<style>
+#uyan_frame{ background:#FFFFFF; margin-top:20px; padding:20px 100px;}
+</style>
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+<!-- UY END -->
+
+</div>
+</div>
+{dede:include filename='footer.htm'/}
+</body>
+</html>

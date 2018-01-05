@@ -1,0 +1,453 @@
+﻿<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="1200">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="skins/css.css">
+<link id="skin" rel="stylesheet" href="skins/jbox.css">
+<script type="text/javascript" src="/skins/jquery-1_002.js"></script>
+<script type="text/javascript" src="/skins/html5.js"></script>
+</head>
+<body>
+{dede:include filename='kefu.htm'/}
+{dede:include filename='header.htm'/}
+<link id="skin" rel="stylesheet" href="/skins/jbox.css">
+<script type="text/javascript" src="/skins/jquery-1.js"></script>
+<script type="text/javascript" src="/skins/jquery_002.js"></script>
+<script type="text/javascript" src="/skins/jquery_005.js"></script>
+<script type="text/javascript" src="/skins/jquery_003.js"></script>
+<script type="text/javascript" src="/skins/jquery_004.js"></script>
+<script type="text/javascript" src="/skins/TweenMax.js"></script>
+<script type="text/javascript" src="/skins/main.js"></script>
+
+<link href="/skins/index.css" rel="stylesheet">
+
+<script type="text/javascript">
+$(function(){
+$("#clients").slide({mainCell:"#bd",effect:"leftLoop",vis:1,scroll:1,autoPlay:false,delayTime :1000});
+$("#yc-mod-slider").slide({mainCell:"#banner",effect:"leftLoop",vis:1,scroll:1,autoPlay:true,delayTime :1000});
+var ww = $(window).width();
+$(".wrapper").css({"left":(1100 - 1900)/2});
+
+TweenMax.to(".bannerV", 0.4, {
+backgroundPosition: 'center 3px',
+ease: Quad.easeOut,
+repeat: -1,
+yoyo: true
+});
+});
+
+
+</script>
+
+<section id="home" class="index">
+<div class="hgrap"> </div>
+<!-- 代码 开始 -->
+<div id="yc-mod-slider">
+<div id="focusBar">
+
+<a href="javascript:void(0)" class="arrL" onclick="prePage()"> </a>
+<a href="javascript:void(0)" class="arrR" onclick="nextPage()"> </a>
+
+
+<ul class="mypng">
+<li id="focusIndex1" style="background-image: url(/skins/b1.jpg);display: block;">
+<div class="focusL">
+<img src="/skins/l_002.png">
+</div>
+<div class="focusR">
+<img src="/skins/r_003.png">
+</div>
+</li>
+<li id="focusIndex2" style="background-image: url(/skins/b2.jpg);">
+<div class="focusL">
+<img src="/skins/l.png">
+</div>
+<div class="focusR">
+<img src="/skins/r.png">
+</div>
+</li>
+<li id="focusIndex3" style="background-image: url(/skins/b3.jpg);">
+<div class="focusL">
+<img src="/skins/l_003.png">
+</div>
+<div class="focusR">
+<img src="/skins/r_002.png">
+</div>
+</li>
+<li id="focusIndex4" style="background-image: url(/skins/b4.jpg);">
+<div class="focusL">
+<img src="/skins/l_004.png">
+</div>
+<div class="focusR">
+<img src="/skins/r_004.png">
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+
+<script src="/skins/jquery.js"></script>
+<script src="/skins/index.js"></script>
+
+</section>
+
+<section id="servies" class="index">
+<h1><span>OUR SERVICES</span><b>.</b>我们的服务</h1>
+<div class="servies_index">
+<div class="servies_index_item design" id="design">
+<div class="servies_index_itemb servies_index_show">
+<div class="servies_pic">
+{dede:type typeid='33'}
+<a href="[field:typeurl/]"><div class="servies_pic_bottom"></div><img src="/skins/index_icon1_.jpg" height="217" width="217"></a>
+{/dede:type}
+</div>
+</div>
+<div style="opacity: 1; padding-top: 20px;" class="ffonts">
+<div class="servies_font_cn">
+{dede:type typeid='33'}<a href="[field:typeurl/]">平面设计</a>{/dede:type}
+</div>
+<div class="servies_font_en en">
+DESIGN<b>.</b>AI<b>.</b>PS
+</div>
+</div>
+</div>
+
+<div class="servies_index_item web" id="web">
+<div class="servies_index_itemb servies_index_show">
+<div class="servies_pic">
+{dede:type typeid='1'}
+<a href="[field:typeurl/]"><div class="servies_pic_bottom"></div><img src="/skins/index_icon2_.jpg" height="217" width="217"></a>
+{/dede:type}
+</div>
+</div>
+<div style="opacity: 1; padding-top: 20px;" class="ffonts">
+<div class="servies_font_cn">
+{dede:type typeid='1'}<a href="[field:typeurl/]">互动建站</a>{/dede:type}
+</div>
+<div class="servies_font_en en">
+WEB<b>.</b>JS<b>.</b>FLASH
+</div>
+</div>
+</div>
+
+<div class="servies_index_item mobile" id="mobile">
+<div class="servies_index_itemb servies_index_show">
+<div class="servies_pic">
+{dede:type typeid='11'}
+<a href="[field:typeurl/]"><div class="servies_pic_bottom"></div><img src="/skins/index_icon3_.jpg" height="217" width="217"></a>
+{/dede:type}
+</div>
+</div>
+<div style="opacity: 1; padding-top: 20px;" class="ffonts">
+<div class="servies_font_cn">
+{dede:type typeid='11'}<a href="[field:typeurl/]">手机建站</a>{/dede:type}
+</div>
+<div class="servies_font_en en">
+MOBILE<b>.</b>HTML5<b>.</b>JS
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="weixin">
+{dede:type typeid='4'}
+<h1><a href="[field:typeurl/]" target="_blank"><span>XUNMOBAN CASE</span><b>.</b><label>寻模板客户案例回顾</label></a></h1>
+{/dede:type}
+<div class="weixinbg weixinbg2">
+{dede:arclist typeid='4' row='1' type='image.' limit='0,1'}
+<div class="weixinitem">
+<div class="weixinitempic">
+<a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]" width="280"></a>
+</div>
+<div class="weixinbody">
+<div class="time">
+[field:pubdate function="MyDate('Y.m.d',@me)"/]<b>.</b>
+</div>
+<div class="weixintit"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></div>
+<div class="weixinb">
+[field:infos/]...
+<br><a href="[field:arcurl/]" target="_blank">阅读全文</a>
+</div>
+</div>
+</div>
+{/dede:arclist}
+
+{dede:arclist typeid='4' row='1' type='image.'  limit='1,1'}
+<div class="weixinitem weixinitem_mid">
+<div class="weixinitempic">
+<a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]" width="280"></a>
+</div>
+<div class="weixinbody">
+<div class="time">
+[field:pubdate function="MyDate('Y.m.d',@me)"/]<b>.</b>
+</div>
+<div class="weixintit"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></div>
+<div class="weixinb">
+[field:infos/]...
+<br><a href="[field:arcurl/]" target="_blank">阅读全文</a>
+</div>
+</div>
+</div>
+{/dede:arclist}
+
+{dede:arclist typeid='4' row='1' type='image.'  limit='2,1'}
+<div class="weixinitem">
+<div class="weixinitempic">
+<a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]" width="280"></a>
+</div>
+<div class="weixinbody">
+<div class="time">
+[field:pubdate function="MyDate('Y.m.d',@me)"/]<b>.</b>
+</div>
+<div class="weixintit"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></div>
+<div class="weixinb">
+[field:infos/]...
+<br><a href="[field:arcurl/]" target="_blank">阅读全文</a>
+</div>
+</div>
+</div>
+{/dede:arclist}
+
+</div>
+</section>
+
+<section id="youshi">
+<h1><span>SUPERIOR PRODUCTS</span><b>.</b>优势产品</h1>
+
+<div class="youshi_index">
+<div class="youshi_index_item">
+{dede:type typeid='3'}<a href="[field:typeurl/]" class="mark" target="_blank"> </a>{/dede:type}
+<img src="/skins/youshi_icon_03.jpg" height="200" width="200">
+<div class="slight">
+<p class="slight_cn">企业品牌官网建站系统</p>
+<p class="slight_en">web<b>.</b>php<b>.</b>html5<b>.</b>css3</p>
+</div>
+</div>
+
+<div class="youshi_index_item youshi_index_itemm">
+{dede:type typeid='29'}<a href="[field:typeurl/]" class="mark" target="_blank"> </a>{/dede:type}
+<img src="/skins/youshi_icon_05.jpg" height="200" width="200">
+<div class="slight">
+<p class="slight_cn">单(多)用户电子商务平台</p>
+<p class="slight_en">shop<b>.</b>mall<b>.</b>php</p>
+</div>
+</div>
+
+<div class="youshi_index_item">
+{dede:type typeid='30'}<a href="[field:typeurl/]" class="mark" target="_blank"> </a>{/dede:type}
+<img src="/skins/youshi_icon_07.jpg" height="200" width="200">
+<div class="slight">
+<p class="slight_cn">单(多)城市行业门户系统</p>
+<p class="slight_en">Industry portal<b>.</b>php<b>.</b>mysql</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h1><span>CONNECT WITH US</span><b>.</b><label>与我们联系</label></h1>
+<div class="contact_cont">
+<div class="contact_cont_info">
+<div class="contact_cont_info_l">
+<p style="font-family:微软雅黑;font-size:18px;">站窝窝 ZHANOO TECHNOLOGY Co., Ltd</p>
+<p style="font-family:微软雅黑;font-size:18px;"><br></p>
+<p>总部地址：重庆市南岸区万达广场（幸福大厦B座）1412、2206</p>
+<p>热线：400-886-9999</p>
+<p>电话：(023) 8527-6913 / 3839-5488</p>
+<p>FAX：(020) 8527-6923</p>
+<p>邮箱：597459892@qq.com</p>
+<p style="margin:20px 0"></p>
+<div id="wb"><a style="opacity: 0;" href="javascript:;" target="_blank">新浪微博</a></div>
+<div id="wx"><a style="opacity: 0;" href="javascript:;" rel="conpanycode">微信</a></div><p></p>
+</div>
+
+<div class="contact_cont_info_r">
+<div class="QQ" style="background:url(/skins/QQ_02.png) no-repeat"><a href="tencent://message/?uin=597459892" class="QQa" style="background: url(/skins/QQ_02.png) no-repeat scroll 0px -50px transparent; opacity: 0;"></a><a href="tencent://message/?uin=597459892" class="QQinfo"><p style="margin-top:1px">竹叶青</p><p class="en">QQ：597459892</p></a></div>
+<div class="QQ" style="background:url(/skins/QQ_02.png) no-repeat"><a href="tencent://message/?uin=597459892" class="QQa" style="background: url(/skins/QQ_02.png) no-repeat scroll 0px -50px transparent; opacity: 0;"></a><a href="tencent://message/?uin=597459892" class="QQinfo"><p style="margin-top:1px">梁经理</p><p class="en">QQ：597459892</p></a></div>
+<div class="QQ" style="background:url(/skins/QQ_02.png) no-repeat"><a href="tencent://message/?uin=597459892" class="QQa" style="background: url(/skins/QQ_02.png) no-repeat scroll 0px -50px transparent; opacity: 0;"></a><a href="tencent://message/?uin=597459892" class="QQinfo"><p style="margin-top:1px">黄小姐</p><p class="en">QQ：597459892</p></a></div>
+<div class="QQ" style="background:url(/skins/QQ_02.png) no-repeat"><a href="tencent://message/?uin=597459892" class="QQa" style="background: url(/skins/QQ_02.png) no-repeat scroll 0px -50px transparent; opacity: 0;"></a><a href="tencent://message/?uin=597459892" class="QQinfo"><p style="margin-top:1px">张小姐</p><p class="en">QQ：597459892</p></a></div>
+</div>
+</div>
+<form id="form1" name="form1">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<div class="contact_cont_message">
+<p style="font-family:微软雅黑;font-size:18px">提交咨询</p>
+<div class="message_left">
+<p><input class="txt" name="name" id="mesname" value="您的称呼" type="text"></p>
+<p><input class="txt" name="company" id="mescompany" value="您所代表的公司" type="text"></p>
+<p><input class="txt" name="phone" value="您的联系电话，多个用，分隔" type="text"></p>
+</div>
+<div class="message_right">
+<p><textarea name="content" id="mesmessage">请输入您的详细需求描述，我们将在24小时内给出答复</textarea></p>
+</div>
+<div class="clear"></div>
+<input type="hidden" name="dede_fields" value="company,text;name,text;phone,text;content,multitext" />
+<input type="hidden" name="dede_fieldshash" value="42be47b6d88168e7f36cbb4d4ed2bfa9" />
+<div class="mesbtn">
+<a style="opacity: 0;" href="javascript:;" id="mesbtna">提交</a>
+</div>
+</div>
+</form>
+</div>
+</section>
+
+
+
+<section id="news">
+<h1><span>NEWS</span><b>.</b>建站新闻</h1>
+<div class="index_news_list">
+{dede:arclist typeid='22' row='6' infolen='280'}
+<div class="index_news index_newss">
+<div class="index_news_addtime en">
+[field:pubdate function="MyDate('Y.m.d',@me)"/]<b>.</b>
+</div>
+<div class="index_news_tit">
+<a target="_blank" href="[field:arcurl/]">[field:title/]</a>
+</div>
+
+<div class="index_news_info">
+[field:infos/]...
+</div>
+</div>
+{/dede:arclist}
+
+<div class="clear"></div>
+</div>
+<div class="news_seeall">
+
+{dede:type typeid='22'}<a href="[field:typeurl/]" id="seeall">see all</a>{/dede:type}
+</div>
+</section>
+
+<section id="client">
+<h1><span>CLIENT LIST</span><b>.</b>为客户创造价值、传递价值是我们的最终使命<br>Creating value for customers, delivering value is our ultimate mission</h1>
+<div class="clientscroll" id="clients">
+<div class="clientsprev prev">
+<img src="/skins/prev.png">
+</div>
+<div class="clientsnext next">
+<img src="/skins/next.png">
+</div>
+<ul id="bd">
+<li>
+<div class="clientitem">
+<img src="/skins/case1.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case2.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case3.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case4.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case5.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case6.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case7.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case8.png" height="178" width="178">
+</div>
+</li>
+<li>
+<div class="clientitem">
+<img src="/skins/case9.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case10.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case11.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case12.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case13.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case14.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case15.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case16.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case17.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case18.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case19.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case20.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case21.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case22.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case23.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case24.png" height="178" width="178">
+</div>
+</li>
+<li>
+<div class="clientitem">
+<img src="/skins/case1.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case2.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case3.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case4.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case5.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case6.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case7.png" height="178" width="178">
+</div>
+<div class="clientitem">
+<img src="/skins/case8.png" height="178" width="178">
+</div>
+</li>
+</ul>
+
+</div>
+</section>
+
+{dede:include filename='footer.htm'/}
+
+</body>
+</html>

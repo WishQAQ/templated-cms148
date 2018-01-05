@@ -1,0 +1,1 @@
+<a href="[field:typeurl/]" id="seeall">see all</a>

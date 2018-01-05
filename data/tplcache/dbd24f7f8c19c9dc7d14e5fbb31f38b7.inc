@@ -1,0 +1,1 @@
+<a href="[field:typeurl/]" class="mark" target="_blank"> </a>
